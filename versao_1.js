@@ -28,29 +28,37 @@
     let soma2 = Number(computador.valor + computador2.valor)
 
 
-     if(iniciarJogo === true){
-      console.log("Iniciar uma rodada");
+    if (iniciarJogo === true){
 
-      if(soma > soma2 && soma <= 21){
+      console.log("iniciar uma rodada");
 
-         console.log(`Usuário - cartas:${usuario.texto} ${usuario2.texto} - pontuação ${soma}`)
-         console.log(`Computador - cartas:  ${computador.texto} ${computador2.texto} - pontuação ${soma2}`);
-         console.log("Usuário ganhou");
+      if (soma > soma2 && soma <= 21) {
 
-      }else if(soma < soma2 && soma2 <= 21){
+       console.log(`Usuário cartas: ${usuario.texto} ${usuario2.texto}  pontuação ${soma}`);
 
-         console.log(`Usuário - cartas:${usuario.texto} ${usuario2.texto} - pontuação ${soma}`)
-         console.log(`Computador - cartas:  ${computador.texto} ${computador2.texto} - pontuação ${soma2}`);
-         console.log("Computador ganhou");
+       console.log(`Computador cartas: ${computador.texto} ${computador2.texto},pontuação ${soma2}`);
+      
+       console.log("Usuário ganhou");
 
-      }else if (soma === soma2) {
+   }  else if (soma < soma2 && soma2 <= 21) {
+
+       console.log(`Usuário cartas: ${usuario.texto} ${usuario2.texto}  pontuação ${soma}`);
+
+       console.log(`Computador cartas: ${computador.texto} ${computador2.texto},pontuação ${soma2}`);
+
+
+       console.log("Computador ganhou");
          
-         console.log("Empate");
-      }
-   
-     }else{
-      console.log("O jogo acabou!!");
-     }
+   }  else if(soma === soma2) {
+
+      console.log("Empate");
+      
+   }  
+   }else{
+
+      console.log("O jogo acabou");
+}
 
 
-     
+
+  
